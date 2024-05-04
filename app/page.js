@@ -1,4 +1,5 @@
-import React, { useReducer } from 'react'
+'use client'
+import React, {useReducer}  from 'react';
 
 const reducer = (state, action) => {
   switch (action.type){
@@ -42,11 +43,11 @@ function Home() {
   });
 
   const handleUsernameChange = (event) => {
-    dispatch({type: "USERNAME", username: event.target.value});
+    dispatch({type: "USERNAME", usernameValue: event.target.value});
   }
 
   const handlePasswordChange = (event) => {
-    dispatch({type: "PASSWORD", password: event.target.value});
+    dispatch({type: "PASSWORD", passwordValue: event.target.value});
   }
 
   const handleFormSubmit = (event) => {
